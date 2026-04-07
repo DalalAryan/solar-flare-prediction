@@ -1,0 +1,75 @@
+# ── Data ──────────────────────────────────────────────
+# Raw and processed data is tracked by DVC, not Git.
+# Only the .dvc pointer files get committed.
+data/raw/
+data/interim/
+data/processed/
+
+# Scientific data formats
+*.fits
+*.fts
+*.h5
+*.hdf5
+*.nc
+*.parquet
+*.feather
+
+# Large flat files
+*.csv
+*.json
+
+# ── Models and Checkpoints ────────────────────────────
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.onnx
+checkpoints/
+models/
+
+# ── Experiment Tracking ───────────────────────────────
+wandb/
+mlruns/
+lightning_logs/
+
+# ── Jupyter ───────────────────────────────────────────
+# Outputs are stripped by nbstripout pre-commit hook.
+# Checkpoint folders still ignored as a safety net.
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environments ──────────────────────────────────────
+.venv/
+venv/
+env/
+.conda/
+
+# ── Secrets ───────────────────────────────────────────
+# Never commit real credentials.
+# Use .env.example as the template instead.
+.env
+*.env
+secrets.yaml
+
+# ── macOS ─────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Editors ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
